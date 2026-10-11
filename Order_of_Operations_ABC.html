@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<title>Order of Operations: ABC</title>
+<style>
+/* Layout: one dark control-panel page; the ladder diagram is the whole stage, controls in a strip under it. */
+:root {
+  color-scheme: dark;
+  --page: #1c1d1f;          /* around the panel */
+  --panel: #404040;         /* diagram background */
+  --well: #262626;          /* device boxes and wire channels */
+  --ink: #ececec;
+  --muted: #bfbfbf;         /* captions */
+  --faint: #8d8d8d;
+  --gold: #ffc000;          /* live conductor */
+  --chip: #2c2d30;
+  --chip-on: #4a4b50;
+  --line: #3a3b3f;
+  --focus: #ffc000;
+  --ui: "Aptos", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+html, body { height: auto; }
+body { margin: 0; background: var(--page); color: var(--ink); font-family: var(--ui); }
+.wrap { max-width: 1240px; margin: 0 auto; padding-inline: 16px; padding-block: 12px 16px; display: grid; gap: 10px; }
+header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 18px; }
+h1 { margin: 0; font-size: 1.35rem; font-weight: 700; letter-spacing: .01em; text-wrap: balance; }
+h1 span { color: var(--gold); }
+.stage { width: 100%; margin-inline: auto; background: var(--panel); border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+.stage svg { display: block; width: 100%; height: auto; margin: 0 auto; touch-action: manipulation; user-select: none; -webkit-user-select: none; }
+.bar { display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; }
+.group { display: flex; align-items: center; gap: 8px; }
+.label { font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--faint); }
+.seg { display: inline-flex; background: var(--chip); border: 1px solid var(--line); border-radius: 8px; padding: 2px; }
+.seg button { font: inherit; font-size: .88rem; color: var(--muted); background: transparent; border: 0; border-radius: 6px; padding: 6px 11px; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--chip-on); color: var(--ink); }
+.seg button:focus-visible, .dev:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.status { margin-left: auto; display: flex; gap: 14px; font-size: .88rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.status b { display: inline-block; width: .7em; height: .7em; border-radius: 50%; background: #555; margin-right: 6px; vertical-align: -1px; box-shadow: inset 0 0 0 1px rgba(0,0,0,.4); }
+.reset { font: inherit; font-size: .88rem; font-weight: 600; color: #f2f2f2; display: inline-flex; align-items: center; gap: 7px; padding: 7px 14px; border-radius: 999px; background: rgba(255,255,255,.04); border: 1.4px dashed #9a9a9a; cursor: pointer; }
+.reset:hover { background: rgba(255,255,255,.1); }
+.reset:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+/* short explanations that appear when the pointer rests on a control */
+[data-tip] { position: relative; }
+[data-tip]::after { content: attr(data-tip); position: absolute; left: 0; bottom: calc(100% + 10px); z-index: 5; width: max-content; max-width: min(240px, calc(100vw - 40px)); display: none;
+  padding: 7px 10px; border-radius: 6px; background: #111214; color: #ececec; font-size: .8rem; font-weight: 400; line-height: 1.35; text-align: left;
+  box-shadow: 0 6px 18px rgba(0,0,0,.45); pointer-events: none; animation: tipIn .15s ease-out .35s both; }
+[data-tip]:hover::after, [data-tip]:focus-visible::after { display: block; }
+@keyframes tipIn { from { opacity: 0; transform: translateY(3px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { [data-tip]::after { animation: none; } }
+.dev { cursor: pointer; outline: none; }
+.cap { font-size: 12.5px; fill: var(--muted); }
+.rail { font-size: 20.3px; font-weight: 700; fill: var(--gold); }
+.devtext { font-weight: 700; fill: rgba(242,242,242,.78); pointer-events: none; }
+@media (max-width: 640px) { .status { margin-left: 0; } }
+@media (prefers-reduced-motion: reduce) { .seg button { transition: none; } }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <h1>Order of Operations: <span>ABC</span></h1>
+  </header>
+
+  <noscript><p style="margin:0;padding:10px 14px;border-radius:8px;background:#3a2f12;color:#ffdc00;font-size:.95rem">
+This page is showing a still picture because scripts are turned off here. Open the simulator in its own browser tab (or from the course link) to press the buttons.</p></noscript>
+  <div class="stage"><svg id="svg" viewBox="0 0 1219.2 685.8" aria-label="Ladder diagram: STOP, three pushbuttons with seal-ins, A and B auxiliary contacts, coils A, B and C"><defs>
+  <linearGradient id="gWell" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#303030"></stop><stop offset="1" stop-color="#1f1f1f"></stop></linearGradient>
+  <linearGradient id="gGloss" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#fff" stop-opacity=".38"></stop><stop offset=".45" stop-color="#fff" stop-opacity=".06"></stop>
+    <stop offset=".55" stop-color="#000" stop-opacity="0"></stop><stop offset="1" stop-color="#000" stop-opacity=".32"></stop></linearGradient>
+  <radialGradient id="gDome" cx=".38" cy=".3" r=".8"><stop offset="0" stop-color="#fff" stop-opacity=".35"></stop><stop offset=".55" stop-color="#fff" stop-opacity="0"></stop><stop offset="1" stop-color="#000" stop-opacity=".35"></stop></radialGradient>
+  <filter id="fShadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="2.2" stdDeviation="2.2" flood-color="#000" flood-opacity=".55"></feDropShadow></filter><linearGradient id="wg0" gradientUnits="userSpaceOnUse" x1="142.9184" y1="65" x2="190" y2="65"><stop offset="0" stop-color="rgb(255,255,215)"></stop><stop offset="0.5" stop-color="rgb(255,179,154)"></stop><stop offset="1" stop-color="rgb(255,94,94)"></stop><stop offset="1" stop-color="rgb(255,94,94)"></stop><stop offset="1" stop-color="rgb(255,94,94)"></stop><stop offset="1" stop-color="rgb(255,94,94)"></stop></linearGradient><linearGradient id="wg1" gradientUnits="userSpaceOnUse" x1="190" y1="65" x2="232.0816" y2="65"><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0.5" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop></linearGradient><linearGradient id="wg2" gradientUnits="userSpaceOnUse" x1="190" y1="65" x2="190" y2="160"><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0.5" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop></linearGradient><linearGradient id="wg3" gradientUnits="userSpaceOnUse" x1="190" y1="160" x2="232.0816" y2="160"><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0.5" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop></linearGradient><linearGradient id="wg4" gradientUnits="userSpaceOnUse" x1="190" y1="160" x2="190" y2="260"><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0.5" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop></linearGradient><linearGradient id="wg5" gradientUnits="userSpaceOnUse" x1="190" y1="260" x2="190" y2="455"><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0.5" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop></linearGradient><linearGradient id="wg6" gradientUnits="userSpaceOnUse" x1="190" y1="260" x2="354.5816" y2="260"><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0.5" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop></linearGradient><linearGradient id="wg7" gradientUnits="userSpaceOnUse" x1="354.5816" y1="260" x2="394.5816" y2="260"><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0.5" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop></linearGradient><linearGradient id="wg8" gradientUnits="userSpaceOnUse" x1="354.5816" y1="260" x2="354.5816" y2="355"><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0.5" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop></linearGradient><linearGradient id="wg9" gradientUnits="userSpaceOnUse" x1="354.5816" y1="355" x2="394.5816" y2="355"><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0.5" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop></linearGradient><linearGradient id="wg10" gradientUnits="userSpaceOnUse" x1="190" y1="455" x2="517.0816" y2="455"><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0.5" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop></linearGradient><linearGradient id="wg11" gradientUnits="userSpaceOnUse" x1="517.0816" y1="455" x2="557.0816" y2="455"><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0.5" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop></linearGradient><linearGradient id="wg12" gradientUnits="userSpaceOnUse" x1="517.0816" y1="455" x2="517.0816" y2="550"><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0.5" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop></linearGradient><linearGradient id="wg13" gradientUnits="userSpaceOnUse" x1="517.0816" y1="550" x2="557.0816" y2="550"><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0.5" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop><stop offset="1" stop-color="#ff5e5e"></stop></linearGradient><linearGradient id="wg14" gradientUnits="userSpaceOnUse" x1="297.9184" y1="65" x2="340" y2="65"><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop></linearGradient><linearGradient id="wg15" gradientUnits="userSpaceOnUse" x1="297.9184" y1="160" x2="340" y2="160"><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop></linearGradient><linearGradient id="wg16" gradientUnits="userSpaceOnUse" x1="340" y1="160" x2="340" y2="65"><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop></linearGradient><linearGradient id="wg17" gradientUnits="userSpaceOnUse" x1="340" y1="65" x2="994.184" y2="65"><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop></linearGradient><linearGradient id="wg18" gradientUnits="userSpaceOnUse" x1="1076.48" y1="65" x2="1270" y2="65"><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop></linearGradient><linearGradient id="wg19" gradientUnits="userSpaceOnUse" x1="460.4184" y1="260" x2="502.5" y2="260"><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop></linearGradient><linearGradient id="wg20" gradientUnits="userSpaceOnUse" x1="460.4184" y1="355" x2="502.5" y2="355"><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop></linearGradient><linearGradient id="wg21" gradientUnits="userSpaceOnUse" x1="502.5" y1="355" x2="502.5" y2="260"><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop></linearGradient><linearGradient id="wg22" gradientUnits="userSpaceOnUse" x1="502.5" y1="260" x2="645.0816" y2="260"><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop></linearGradient><linearGradient id="wg23" gradientUnits="userSpaceOnUse" x1="710.9184" y1="260" x2="994.184" y2="260"><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop></linearGradient><linearGradient id="wg24" gradientUnits="userSpaceOnUse" x1="1076.48" y1="260" x2="1270" y2="260"><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop></linearGradient><linearGradient id="wg25" gradientUnits="userSpaceOnUse" x1="622.9184" y1="455" x2="665" y2="455"><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop></linearGradient><linearGradient id="wg26" gradientUnits="userSpaceOnUse" x1="622.9184" y1="550" x2="665" y2="550"><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop></linearGradient><linearGradient id="wg27" gradientUnits="userSpaceOnUse" x1="665" y1="550" x2="665" y2="455"><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop></linearGradient><linearGradient id="wg28" gradientUnits="userSpaceOnUse" x1="665" y1="455" x2="730.8368" y2="455"><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop></linearGradient><linearGradient id="wg29" gradientUnits="userSpaceOnUse" x1="796.6736" y1="455" x2="862.5104" y2="455"><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop></linearGradient><linearGradient id="wg30" gradientUnits="userSpaceOnUse" x1="928.3472" y1="455" x2="994.184" y2="455"><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop></linearGradient><linearGradient id="wg31" gradientUnits="userSpaceOnUse" x1="1076.48" y1="455" x2="1270" y2="455"><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop><stop offset="0" stop-color="#ff5e5e"></stop></linearGradient></defs><g><line x1="-62.484" y1="65" x2="77.0816" y2="65" stroke="#262626" stroke-width="22" stroke-linecap="round"></line><line x1="142.9184" y1="65" x2="190" y2="65" stroke="#262626" stroke-width="22" stroke-linecap="round"></line><line x1="190" y1="65" x2="232.0816" y2="65" stroke="#262626" stroke-width="22" stroke-linecap="round"></line><line x1="190" y1="65" x2="190" y2="160" stroke="#262626" stroke-width="22" stroke-linecap="round"></line><line x1="190" y1="160" x2="232.0816" y2="160" stroke="#262626" stroke-width="22" stroke-linecap="round"></line><line x1="190" y1="160" x2="190" y2="260" stroke="#262626" stroke-width="22" stroke-linecap="round"></line><line x1="190" y1="260" x2="190" y2="455" stroke="#262626" stroke-width="22" stroke-linecap="round"></line><line x1="190" y1="260" x2="354.5816" y2="260" stroke="#262626" stroke-width="22" stroke-linecap="round"></line><line x1="354.5816" y1="260" x2="394.5816" y2="260" stroke="#262626" stroke-width="22" stroke-linecap="round"></line><line x1="354.5816" y1="260" x2="354.5816" y2="355" stroke="#262626" stroke-width="22" stroke-linecap="round"></line><line x1="354.5816" y1="355" x2="394.5816" y2="355" stroke="#262626" stroke-width="22" stroke-linecap="round"></line><line x1="190" y1="455" x2="517.0816" y2="455" stroke="#262626" stroke-width="22" stroke-linecap="round"></line><line x1="517.0816" y1="455" x2="557.0816" y2="455" stroke="#262626" stroke-width="22" stroke-linecap="round"></line><line x1="517.0816" y1="455" x2="517.0816" y2="550" stroke="#262626" stroke-width="22" stroke-linecap="round"></line><line x1="517.0816" y1="550" x2="557.0816" y2="550" stroke="#262626" stroke-width="22" stroke-linecap="round"></line><line x1="297.9184" y1="65" x2="340" y2="65" stroke="#262626" stroke-width="22" stroke-linecap="round"></line><line x1="297.9184" y1="160" x2="340" y2="160" stroke="#262626" stroke-width="22" stroke-linecap="round"></line><line x1="340" y1="160" x2="340" y2="65" stroke="#262626" stroke-width="22" stroke-linecap="round"></line><line x1="340" y1="65" x2="994.184" y2="65" stroke="#262626" stroke-width="22" stroke-linecap="round"></line><line x1="1076.48" y1="65" x2="1270" y2="65" stroke="#262626" stroke-width="22" stroke-linecap="round"></line><line x1="460.4184" y1="260" x2="502.5" y2="260" stroke="#262626" stroke-width="22" stroke-linecap="round"></line><line x1="460.4184" y1="355" x2="502.5" y2="355" stroke="#262626" stroke-width="22" stroke-linecap="round"></line><line x1="502.5" y1="355" x2="502.5" y2="260" stroke="#262626" stroke-width="22" stroke-linecap="round"></line><line x1="502.5" y1="260" x2="645.0816" y2="260" stroke="#262626" stroke-width="22" stroke-linecap="round"></line><line x1="710.9184" y1="260" x2="994.184" y2="260" stroke="#262626" stroke-width="22" stroke-linecap="round"></line><line x1="1076.48" y1="260" x2="1270" y2="260" stroke="#262626" stroke-width="22" stroke-linecap="round"></line><line x1="622.9184" y1="455" x2="665" y2="455" stroke="#262626" stroke-width="22" stroke-linecap="round"></line><line x1="622.9184" y1="550" x2="665" y2="550" stroke="#262626" stroke-width="22" stroke-linecap="round"></line><line x1="665" y1="550" x2="665" y2="455" stroke="#262626" stroke-width="22" stroke-linecap="round"></line><line x1="665" y1="455" x2="730.8368" y2="455" stroke="#262626" stroke-width="22" stroke-linecap="round"></line><line x1="796.6736" y1="455" x2="862.5104" y2="455" stroke="#262626" stroke-width="22" stroke-linecap="round"></line><line x1="928.3472" y1="455" x2="994.184" y2="455" stroke="#262626" stroke-width="22" stroke-linecap="round"></line><line x1="1076.48" y1="455" x2="1270" y2="455" stroke="#262626" stroke-width="22" stroke-linecap="round"></line></g><g><line x1="-62.484" y1="65" x2="77.0816" y2="65" stroke="#ffffd7" stroke-width="8.9" stroke-linecap="round"></line><line stroke="url(#wg0)" stroke-width="8.9" stroke-linecap="round" visibility="visible" x1="142.9184" y1="65" x2="190" y2="65"></line><line stroke="url(#wg1)" stroke-width="8.9" stroke-linecap="round" visibility="visible" x1="190" y1="65" x2="232.0816" y2="65"></line><line stroke="url(#wg2)" stroke-width="8.9" stroke-linecap="round" visibility="visible" x1="190" y1="65" x2="190" y2="160"></line><line stroke="url(#wg3)" stroke-width="8.9" stroke-linecap="round" visibility="visible" x1="190" y1="160" x2="232.0816" y2="160"></line><line stroke="url(#wg4)" stroke-width="8.9" stroke-linecap="round" visibility="visible" x1="190" y1="160" x2="190" y2="260"></line><line stroke="url(#wg5)" stroke-width="8.9" stroke-linecap="round" visibility="visible" x1="190" y1="260" x2="190" y2="455"></line><line stroke="url(#wg6)" stroke-width="8.9" stroke-linecap="round" visibility="visible" x1="190" y1="260" x2="354.5816" y2="260"></line><line stroke="url(#wg7)" stroke-width="8.9" stroke-linecap="round" visibility="visible" x1="354.5816" y1="260" x2="394.5816" y2="260"></line><line stroke="url(#wg8)" stroke-width="8.9" stroke-linecap="round" visibility="visible" x1="354.5816" y1="260" x2="354.5816" y2="355"></line><line stroke="url(#wg9)" stroke-width="8.9" stroke-linecap="round" visibility="visible" x1="354.5816" y1="355" x2="394.5816" y2="355"></line><line stroke="url(#wg10)" stroke-width="8.9" stroke-linecap="round" visibility="visible" x1="190" y1="455" x2="517.0816" y2="455"></line><line stroke="url(#wg11)" stroke-width="8.9" stroke-linecap="round" visibility="visible" x1="517.0816" y1="455" x2="557.0816" y2="455"></line><line stroke="url(#wg12)" stroke-width="8.9" stroke-linecap="round" visibility="visible" x1="517.0816" y1="455" x2="517.0816" y2="550"></line><line stroke="url(#wg13)" stroke-width="8.9" stroke-linecap="round" visibility="visible" x1="517.0816" y1="550" x2="557.0816" y2="550"></line><line stroke="url(#wg14)" stroke-width="8.9" stroke-linecap="round" visibility="hidden"></line><line stroke="url(#wg15)" stroke-width="8.9" stroke-linecap="round" visibility="hidden"></line><line stroke="url(#wg16)" stroke-width="8.9" stroke-linecap="round" visibility="hidden"></line><line stroke="url(#wg17)" stroke-width="8.9" stroke-linecap="round" visibility="hidden"></line><line stroke="url(#wg18)" stroke-width="8.9" stroke-linecap="round" visibility="hidden"></line><line stroke="url(#wg19)" stroke-width="8.9" stroke-linecap="round" visibility="hidden"></line><line stroke="url(#wg20)" stroke-width="8.9" stroke-linecap="round" visibility="hidden"></line><line stroke="url(#wg21)" stroke-width="8.9" stroke-linecap="round" visibility="hidden"></line><line stroke="url(#wg22)" stroke-width="8.9" stroke-linecap="round" visibility="hidden"></line><line stroke="url(#wg23)" stroke-width="8.9" stroke-linecap="round" visibility="hidden"></line><line stroke="url(#wg24)" stroke-width="8.9" stroke-linecap="round" visibility="hidden"></line><line stroke="url(#wg25)" stroke-width="8.9" stroke-linecap="round" visibility="hidden"></line><line stroke="url(#wg26)" stroke-width="8.9" stroke-linecap="round" visibility="hidden"></line><line stroke="url(#wg27)" stroke-width="8.9" stroke-linecap="round" visibility="hidden"></line><line stroke="url(#wg28)" stroke-width="8.9" stroke-linecap="round" visibility="hidden"></line><line stroke="url(#wg29)" stroke-width="8.9" stroke-linecap="round" visibility="hidden"></line><line stroke="url(#wg30)" stroke-width="8.9" stroke-linecap="round" visibility="hidden"></line><line stroke="url(#wg31)" stroke-width="8.9" stroke-linecap="round" visibility="hidden"></line></g><g><g class="dev" tabindex="0" role="button" aria-label="STOP Button (NC)"><polygon points="96.36,32.08 123.64,32.08 142.92,51.36 142.92,78.64 123.64,97.92 96.36,97.92 77.08,78.64 77.08,51.36" fill="url(#gWell)" stroke="#FF0032" stroke-width="1.8"></polygon><g transform=""><polygon points="100.91,43.05 119.09,43.05 131.95,55.91 131.95,74.09 119.09,86.95 100.91,86.95 88.05,74.09 88.05,55.91" fill="#FF0032" stroke="#1d2733" stroke-width="1.2" filter="url(#fShadow)"></polygon><polygon points="100.91,43.05 119.09,43.05 131.95,55.91 131.95,74.09 119.09,86.95 100.91,86.95 88.05,74.09 88.05,55.91" fill="url(#gGloss)"></polygon><text x="110" y="69" text-anchor="middle" class="devtext" font-size="11.5" style="fill: rgba(28, 28, 28, 0.85);">STOP</text></g></g><g class="dev" tabindex="0" role="button" aria-label="A Button (NO)"><rect x="232.0816" y="32.0816" width="65.8368" height="65.8368" rx="10.974994559999999" fill="url(#gWell)" stroke="#00B050" stroke-width="1.8"></rect><g transform=""><rect x="243.0544" y="43.0544" width="43.8912" height="43.8912" rx="7.316663039999999" fill="#00B050" stroke="#1d2733" stroke-width="1.2" filter="url(#fShadow)"></rect><rect x="243.0544" y="43.0544" width="43.8912" height="43.8912" rx="7.316663039999999" fill="url(#gGloss)"></rect><text x="265" y="71.6" text-anchor="middle" class="devtext" font-size="19" style="fill: rgba(28, 28, 28, 0.85);">A</text></g></g><g class="dev" tabindex="0" role="button" aria-label="B Button (NO)"><rect x="394.5816" y="227.0816" width="65.8368" height="65.8368" rx="10.974994559999999" fill="url(#gWell)" stroke="#0070C0" stroke-width="1.8"></rect><g transform=""><rect x="405.5544" y="238.0544" width="43.8912" height="43.8912" rx="7.316663039999999" fill="#0070C0" stroke="#1d2733" stroke-width="1.2" filter="url(#fShadow)"></rect><rect x="405.5544" y="238.0544" width="43.8912" height="43.8912" rx="7.316663039999999" fill="url(#gGloss)"></rect><text x="427.5" y="266.6" text-anchor="middle" class="devtext" font-size="19" style="fill: rgba(28, 28, 28, 0.85);">B</text></g></g><g class="dev" tabindex="0" role="button" aria-label="C Button (NO)"><rect x="557.0816" y="422.0816" width="65.8368" height="65.8368" rx="10.974994559999999" fill="url(#gWell)" stroke="#FFDC00" stroke-width="1.8"></rect><g transform=""><rect x="568.0544" y="433.0544" width="43.8912" height="43.8912" rx="7.316663039999999" fill="#FFDC00" stroke="#1d2733" stroke-width="1.2" filter="url(#fShadow)"></rect><rect x="568.0544" y="433.0544" width="43.8912" height="43.8912" rx="7.316663039999999" fill="url(#gGloss)"></rect><text x="590" y="461.6" text-anchor="middle" class="devtext" font-size="19" style="fill: rgba(28, 28, 28, 0.85);">C</text></g></g><g><rect x="232.0816" y="133.006912" width="65.8368" height="53.986176" rx="8.9994955392" fill="url(#gWell)" stroke="#00B050" stroke-width="1.8"></rect><g transform="translate(0 -15.00)"><rect x="240.59100640000003" y="156.5" width="48.817987200000005" height="7" rx="3.5" stroke="rgba(0,0,0,.35)" stroke-width="0.6" fill="#a6a6a6"></rect><rect x="240.59100640000003" y="156.5" width="48.817987200000005" height="7" rx="3.5" fill="url(#gGloss)"></rect></g><g fill="#404040"><rect x="236.5816" y="157.037344" width="11.9592" height="5.925312"></rect><rect x="281.4592" y="157.037344" width="11.9592" height="5.925312"></rect><circle cx="248.54080000000002" cy="160" r="6.912863999999999"></circle><circle cx="281.4592" cy="160" r="6.912863999999999"></circle></g><g fill="url(#gDome)"><circle cx="248.54080000000002" cy="160" r="6.912863999999999"></circle><circle cx="281.4592" cy="160" r="6.912863999999999"></circle></g></g><g><rect x="394.5816" y="328.006912" width="65.8368" height="53.986176" rx="8.9994955392" fill="url(#gWell)" stroke="#0070C0" stroke-width="1.8"></rect><g transform="translate(0 -15.00)"><rect x="403.09100639999997" y="351.5" width="48.81798720000006" height="7" rx="3.5" stroke="rgba(0,0,0,.35)" stroke-width="0.6" fill="#a6a6a6"></rect><rect x="403.09100639999997" y="351.5" width="48.81798720000006" height="7" rx="3.5" fill="url(#gGloss)"></rect></g><g fill="#404040"><rect x="399.0816" y="352.037344" width="11.9592" height="5.925312"></rect><rect x="443.9592" y="352.037344" width="11.9592" height="5.925312"></rect><circle cx="411.0408" cy="355" r="6.912863999999999"></circle><circle cx="443.9592" cy="355" r="6.912863999999999"></circle></g><g fill="url(#gDome)"><circle cx="411.0408" cy="355" r="6.912863999999999"></circle><circle cx="443.9592" cy="355" r="6.912863999999999"></circle></g></g><g><rect x="557.0816" y="523.006912" width="65.8368" height="53.986176" rx="8.9994955392" fill="url(#gWell)" stroke="#FFDC00" stroke-width="1.8"></rect><g transform="translate(0 -15.00)"><rect x="565.5910064" y="546.5" width="48.81798720000006" height="7" rx="3.5" stroke="rgba(0,0,0,.35)" stroke-width="0.6" fill="#a6a6a6"></rect><rect x="565.5910064" y="546.5" width="48.81798720000006" height="7" rx="3.5" fill="url(#gGloss)"></rect></g><g fill="#404040"><rect x="561.5816" y="547.037344" width="11.9592" height="5.925312"></rect><rect x="606.4592" y="547.037344" width="11.9592" height="5.925312"></rect><circle cx="573.5408" cy="550" r="6.912863999999999"></circle><circle cx="606.4592" cy="550" r="6.912863999999999"></circle></g><g fill="url(#gDome)"><circle cx="573.5408" cy="550" r="6.912863999999999"></circle><circle cx="606.4592" cy="550" r="6.912863999999999"></circle></g></g><g><rect x="645.0816" y="233.006912" width="65.8368" height="53.986176" rx="8.9994955392" fill="url(#gWell)" stroke="#00B050" stroke-width="1.8"></rect><g transform="translate(0 -15.00)"><rect x="653.5910064" y="256.5" width="48.81798720000006" height="7" rx="3.5" stroke="rgba(0,0,0,.35)" stroke-width="0.6" fill="#a6a6a6"></rect><rect x="653.5910064" y="256.5" width="48.81798720000006" height="7" rx="3.5" fill="url(#gGloss)"></rect></g><g fill="#404040"><rect x="649.5816" y="257.037344" width="11.9592" height="5.925312"></rect><rect x="694.4592" y="257.037344" width="11.9592" height="5.925312"></rect><circle cx="661.5408" cy="260" r="6.912863999999999"></circle><circle cx="694.4592" cy="260" r="6.912863999999999"></circle></g><g fill="url(#gDome)"><circle cx="661.5408" cy="260" r="6.912863999999999"></circle><circle cx="694.4592" cy="260" r="6.912863999999999"></circle></g></g><g><rect x="730.8367999999999" y="428.006912" width="65.8368" height="53.986176" rx="8.9994955392" fill="url(#gWell)" stroke="#00B050" stroke-width="1.8"></rect><g transform="translate(0 -15.00)"><rect x="739.3462063999999" y="451.5" width="48.81798720000006" height="7" rx="3.5" stroke="rgba(0,0,0,.35)" stroke-width="0.6" fill="#a6a6a6"></rect><rect x="739.3462063999999" y="451.5" width="48.81798720000006" height="7" rx="3.5" fill="url(#gGloss)"></rect></g><g fill="#404040"><rect x="735.3367999999999" y="452.037344" width="11.9592" height="5.925312"></rect><rect x="780.2144" y="452.037344" width="11.9592" height="5.925312"></rect><circle cx="747.2959999999999" cy="455" r="6.912863999999999"></circle><circle cx="780.2144" cy="455" r="6.912863999999999"></circle></g><g fill="url(#gDome)"><circle cx="747.2959999999999" cy="455" r="6.912863999999999"></circle><circle cx="780.2144" cy="455" r="6.912863999999999"></circle></g></g><g><rect x="862.5104" y="428.006912" width="65.8368" height="53.986176" rx="8.9994955392" fill="url(#gWell)" stroke="#0070C0" stroke-width="1.8"></rect><g transform="translate(0 -15.00)"><rect x="871.0198064" y="451.5" width="48.81798720000006" height="7" rx="3.5" stroke="rgba(0,0,0,.35)" stroke-width="0.6" fill="#a6a6a6"></rect><rect x="871.0198064" y="451.5" width="48.81798720000006" height="7" rx="3.5" fill="url(#gGloss)"></rect></g><g fill="#404040"><rect x="867.0104" y="452.037344" width="11.9592" height="5.925312"></rect><rect x="911.888" y="452.037344" width="11.9592" height="5.925312"></rect><circle cx="878.9696" cy="455" r="6.912863999999999"></circle><circle cx="911.888" cy="455" r="6.912863999999999"></circle></g><g fill="url(#gDome)"><circle cx="878.9696" cy="455" r="6.912863999999999"></circle><circle cx="911.888" cy="455" r="6.912863999999999"></circle></g></g><g><circle cx="1035.332" cy="65" r="41.148" fill="url(#gWell)" stroke="#00B050" stroke-width="1.8"></circle><circle cx="1035.332" cy="65" r="30.1752" fill="rgb(64,64,64)" stroke="#1d2733" stroke-width="1.2" filter="url(#fShadow)"></circle><circle cx="1035.332" cy="65" r="30.1752" fill="url(#gDome)"></circle><text x="1035.332" y="72.5" text-anchor="middle" class="devtext" font-size="21" style="fill: rgba(242, 242, 242, 0.78);">A</text></g><g><circle cx="1035.332" cy="260" r="41.148" fill="url(#gWell)" stroke="#0070C0" stroke-width="1.8"></circle><circle cx="1035.332" cy="260" r="30.1752" fill="rgb(64,64,64)" stroke="#1d2733" stroke-width="1.2" filter="url(#fShadow)"></circle><circle cx="1035.332" cy="260" r="30.1752" fill="url(#gDome)"></circle><text x="1035.332" y="267.5" text-anchor="middle" class="devtext" font-size="21" style="fill: rgba(242, 242, 242, 0.78);">B</text></g><g><circle cx="1035.332" cy="455" r="41.148" fill="url(#gWell)" stroke="#FFDC00" stroke-width="1.8"></circle><circle cx="1035.332" cy="455" r="30.1752" fill="rgb(64,64,64)" stroke="#1d2733" stroke-width="1.2" filter="url(#fShadow)"></circle><circle cx="1035.332" cy="455" r="30.1752" fill="url(#gDome)"></circle><text x="1035.332" y="462.5" text-anchor="middle" class="devtext" font-size="21" style="fill: rgba(242, 242, 242, 0.78);">C</text></g></g><g><text x="110" y="111.91839999999999" text-anchor="middle" class="cap">STOP Button (NC)</text><text x="265" y="111.91839999999999" text-anchor="middle" class="cap">A Button (NO)</text><text x="427.5" y="306.9184" text-anchor="middle" class="cap">B Button (NO)</text><text x="590" y="501.9184" text-anchor="middle" class="cap">C Button (NO)</text><text x="265" y="201.993088" text-anchor="middle" class="cap">A Seal-In (NO)</text><text x="427.5" y="396.993088" text-anchor="middle" class="cap">B Seal-In (NO)</text><text x="590" y="591.993088" text-anchor="middle" class="cap">C Seal-In (NO)</text><text x="678" y="301.993088" text-anchor="middle" class="cap">A Aux (NO)</text><text x="763.7552" y="496.993088" text-anchor="middle" class="cap">A Aux (NO)</text><text x="895.4288" y="496.993088" text-anchor="middle" class="cap">B Aux (NO)</text><text x="1035.332" y="120.148" text-anchor="middle" class="cap">A Coil</text><text x="1035.332" y="315.148" text-anchor="middle" class="cap">B Coil</text><text x="1035.332" y="510.148" text-anchor="middle" class="cap">C Coil</text><text x="15" y="46" class="rail">L1</text><text x="1165" y="95" class="rail">L2</text><text x="1165" y="290" class="rail">L2</text><text x="1165" y="485" class="rail">L2</text></g></svg></div>
+
+  <div class="bar">
+    <div class="group"><span class="label" id="lb-speed">Speed</span>
+      <div class="seg" role="group" aria-labelledby="lb-speed">
+        <button type="button" id="sp-025" data-speed="0.25" data-tip="Quarter speed: follow the current step by step">¼×</button>
+        <button type="button" id="sp-05" data-speed="0.5" data-tip="Half speed">½×</button>
+        <button type="button" id="sp-1" data-speed="1" aria-pressed="true" data-tip="Normal speed">1×</button>
+      </div>
+    </div>
+    <div class="group"><span class="label" id="lb-mode">Pushbuttons</span>
+      <div class="seg" role="group" aria-labelledby="lb-mode">
+        <button type="button" id="md-click" data-mode="click" aria-pressed="true" data-tip="One click presses a button; it lets go once the circuit settles">Click</button>
+        <button type="button" id="md-hold" data-mode="hold" data-tip="A button stays down only while you hold it">Press and hold</button>
+      </div>
+    </div>
+    <button type="button" id="reset-btn" class="reset" data-tip="Turn everything off and start over">
+      <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><path d="M15.5 10a5.5 5.5 0 1 1-1.6-3.9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M14.4 2.8l.1 3.9-3.9.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Reset
+    </button>
+    <div class="status" aria-live="polite">
+      <span><b id="st-A"></b>A</span><span><b id="st-B"></b>B</span><span><b id="st-C"></b>C</span>
+    </div>
+  </div>
+</div>
+
+<script>
+const GEO = {"segs":[{"g":"SC","x1":142.9184,"y1":65.0,"x2":190.0,"y2":65.0,"off":0.0,"dur":0.0942},{"g":"SC","x1":190.0,"y1":65.0,"x2":232.0816,"y2":65.0,"off":0.0942,"dur":0.0842},{"g":"SC","x1":190.0,"y1":65.0,"x2":190.0,"y2":160.0,"off":0.0942,"dur":0.19},{"g":"SC","x1":190.0,"y1":160.0,"x2":232.0816,"y2":160.0,"off":0.2842,"dur":0.0842},{"g":"SC","x1":190.0,"y1":160.0,"x2":190.0,"y2":260.0,"off":0.2842,"dur":0.2},{"g":"SC","x1":190.0,"y1":260.0,"x2":190.0,"y2":455.0,"off":0.4842,"dur":0.39},{"g":"SC","x1":190.0,"y1":260.0,"x2":354.5816,"y2":260.0,"off":0.4842,"dur":0.3292},{"g":"SC","x1":354.5816,"y1":260.0,"x2":394.5816,"y2":260.0,"off":0.8133,"dur":0.08},{"g":"SC","x1":354.5816,"y1":260.0,"x2":354.5816,"y2":355.0,"off":0.8133,"dur":0.19},{"g":"SC","x1":354.5816,"y1":355.0,"x2":394.5816,"y2":355.0,"off":1.0033,"dur":0.08},{"g":"SC","x1":190.0,"y1":455.0,"x2":517.0816,"y2":455.0,"off":0.8742,"dur":0.6542},{"g":"SC","x1":517.0816,"y1":455.0,"x2":557.0816,"y2":455.0,"off":1.5283,"dur":0.08},{"g":"SC","x1":517.0816,"y1":455.0,"x2":517.0816,"y2":550.0,"off":1.5283,"dur":0.19},{"g":"SC","x1":517.0816,"y1":550.0,"x2":557.0816,"y2":550.0,"off":1.7183,"dur":0.08},{"g":"ABTN","x1":297.9184,"y1":65.0,"x2":340.0,"y2":65.0,"off":0.0,"dur":0.0842},{"g":"ASEAL","x1":297.9184,"y1":160.0,"x2":340.0,"y2":160.0,"off":0.0,"dur":0.0842},{"g":"ASEAL","x1":340.0,"y1":160.0,"x2":340.0,"y2":65.0,"off":0.0842,"dur":0.19},{"g":"AJOIN","x1":340.0,"y1":65.0,"x2":994.184,"y2":65.0,"off":0.0,"dur":1.3084},{"g":"ANEUT","x1":1076.48,"y1":65.0,"x2":1270.0,"y2":65.0,"off":0.0,"dur":0.387},{"g":"BBTN","x1":460.4184,"y1":260.0,"x2":502.5,"y2":260.0,"off":0.0,"dur":0.0842},{"g":"BSEAL","x1":460.4184,"y1":355.0,"x2":502.5,"y2":355.0,"off":0.0,"dur":0.0842},{"g":"BSEAL","x1":502.5,"y1":355.0,"x2":502.5,"y2":260.0,"off":0.0842,"dur":0.19},{"g":"BJOIN","x1":502.5,"y1":260.0,"x2":645.0816,"y2":260.0,"off":0.0,"dur":0.2852},{"g":"BCOIL","x1":710.9184,"y1":260.0,"x2":994.184,"y2":260.0,"off":0.0,"dur":0.5665},{"g":"BNEUT","x1":1076.48,"y1":260.0,"x2":1270.0,"y2":260.0,"off":0.0,"dur":0.387},{"g":"CBTN","x1":622.9184,"y1":455.0,"x2":665.0,"y2":455.0,"off":0.0,"dur":0.0842},{"g":"CSEAL","x1":622.9184,"y1":550.0,"x2":665.0,"y2":550.0,"off":0.0,"dur":0.0842},{"g":"CSEAL","x1":665.0,"y1":550.0,"x2":665.0,"y2":455.0,"off":0.0842,"dur":0.19},{"g":"CJOIN","x1":665.0,"y1":455.0,"x2":730.8368,"y2":455.0,"off":0.0,"dur":0.1317},{"g":"CMID","x1":796.6736,"y1":455.0,"x2":862.5104,"y2":455.0,"off":0.0,"dur":0.1317},{"g":"CCOIL","x1":928.3472,"y1":455.0,"x2":994.184,"y2":455.0,"off":0.0,"dur":0.1317},{"g":"CNEUT","x1":1076.48,"y1":455.0,"x2":1270.0,"y2":455.0,"off":0.0,"dur":0.387}],"groups":[{"name":"SC","feeds":[{"dev":0,"src":-1,"tap":0.0}]},{"name":"ABTN","feeds":[{"dev":1,"src":0,"tap":0.178}]},{"name":"ASEAL","feeds":[{"dev":4,"src":0,"tap":0.368}]},{"name":"AJOIN","feeds":[{"dev":-1,"src":1,"tap":0.084},{"dev":-1,"src":2,"tap":0.274}]},{"name":"ANEUT","feeds":[{"dev":10,"src":3,"tap":1.308}]},{"name":"BBTN","feeds":[{"dev":2,"src":0,"tap":0.893}]},{"name":"BSEAL","feeds":[{"dev":5,"src":0,"tap":1.083}]},{"name":"BJOIN","feeds":[{"dev":-1,"src":5,"tap":0.084},{"dev":-1,"src":6,"tap":0.274}]},{"name":"BCOIL","feeds":[{"dev":7,"src":7,"tap":0.285}]},{"name":"BNEUT","feeds":[{"dev":11,"src":8,"tap":0.567}]},{"name":"CBTN","feeds":[{"dev":3,"src":0,"tap":1.608}]},{"name":"CSEAL","feeds":[{"dev":6,"src":0,"tap":1.798}]},{"name":"CJOIN","feeds":[{"dev":-1,"src":10,"tap":0.084},{"dev":-1,"src":11,"tap":0.274}]},{"name":"CMID","feeds":[{"dev":8,"src":12,"tap":0.132}]},{"name":"CCOIL","feeds":[{"dev":9,"src":13,"tap":0.132}]},{"name":"CNEUT","feeds":[{"dev":12,"src":14,"tap":0.132}]}],"devices":[{"key":"STOP","kind":"btn","owner":-1,"nc":false,"color":"#FF0032","caption":"STOP Button (NC)","text":"STOP","x":110.0,"y":65.0},{"key":"PBA","kind":"btn","owner":-1,"nc":false,"color":"#00B050","caption":"A Button (NO)","text":"A","x":265.0,"y":65.0},{"key":"PBB","kind":"btn","owner":-1,"nc":false,"color":"#0070C0","caption":"B Button (NO)","text":"B","x":427.5,"y":260.0},{"key":"PBC","kind":"btn","owner":-1,"nc":false,"color":"#FFDC00","caption":"C Button (NO)","text":"C","x":590.0,"y":455.0},{"key":"ASEAL","kind":"con","owner":10,"nc":false,"color":"#00B050","caption":"A Seal-In (NO)","text":"","x":265.0,"y":160.0},{"key":"BSEAL","kind":"con","owner":11,"nc":false,"color":"#0070C0","caption":"B Seal-In (NO)","text":"","x":427.5,"y":355.0},{"key":"CSEAL","kind":"con","owner":12,"nc":false,"color":"#FFDC00","caption":"C Seal-In (NO)","text":"","x":590.0,"y":550.0},{"key":"ILAB","kind":"con","owner":10,"nc":false,"color":"#00B050","caption":"A Aux (NO)","text":"","x":678.0,"y":260.0},{"key":"ILAC","kind":"con","owner":10,"nc":false,"color":"#00B050","caption":"A Aux (NO)","text":"","x":763.7552,"y":455.0},{"key":"ILBC","kind":"con","owner":11,"nc":false,"color":"#0070C0","caption":"B Aux (NO)","text":"","x":895.4288,"y":455.0},{"key":"ACOIL","kind":"coil","owner":-1,"nc":false,"color":"#00B050","caption":"A Coil","text":"A","x":1035.332,"y":65.0},{"key":"BCOIL","kind":"coil","owner":-1,"nc":false,"color":"#0070C0","caption":"B Coil","text":"B","x":1035.332,"y":260.0},{"key":"CCOIL","kind":"coil","owner":-1,"nc":false,"color":"#FFDC00","caption":"C Coil","text":"C","x":1035.332,"y":455.0}],"coils":{"10":{"g":3,"tap":1.308368},"11":{"g":8,"tap":0.5665312},"12":{"g":14,"tap":0.1316736}},"passBox":0.1316736,"passCoil":0.164592,"size":{"box":65.8368,"conH":53.986176,"coil":82.296,"coilIn":60.3504,"btnIn":43.8912,"blW":73.73721599999999,"blH":11.850624},"src":{"x1":-62.484,"x2":77.0816,"y":65.0},"rails":[{"t":"L1","x":15,"y":25.0},{"t":"L2","x":1165,"y":74.0},{"t":"L2","x":1165,"y":269.0},{"t":"L2","x":1165,"y":464.0}],"reset":{"x":1076,"y":622,"w":118,"h":40}};
+
+/* ---------------- timing (seconds of circuit time) ---------------- */
+const CT = 0.2;          // contacts start to move this long after their coil changes
+const SWING = 0.4;       // time for a contact blade to swing
+const HOLD_EXTRA = 0.5;  // a clicked button stays down this long after everything settles
+const OPEN_LIFT = 15;    // how far the contact bar lifts off the posts when open
+const GREY = '#404040', BLADE_GREY = '#a6a6a6';
+const NG = GEO.groups.length, ND = GEO.devices.length;
+const DEV = GEO.devices;
+const passOf = d => d < 0 ? 0 : (DEV[d].kind === 'coil' ? GEO.passCoil : GEO.passBox);
+const groupLen = GEO.groups.map((g, i) => Math.max(0, ...GEO.segs.filter(s => s.g === g.name).map(s => s.off + s.dur)));
+const gIndex = Object.fromEntries(GEO.groups.map((g, i) => [g.name, i]));
+const coilOf = {};      // coil device -> {g, tap}
+for (const [d, c] of Object.entries(GEO.coils)) coilOf[+d] = c;
+
+const RED = DEV.find(d => d.key === 'STOP').color;   // current straight from STOP is red
+// the current is drawn a little lighter than the button it came from
+const LIGHTEN = 0.2;
+const FLOW = DEV.map(d => okHex(d.color, '#ffffff', LIGHTEN));
+const FLOW_RED = okHex(RED, '#ffffff', LIGHTEN);
+const OFF_WHITE = '#ffffd7';   // "egg": supply from L1, and the return side of each coil out to L2
+// wire groups on the far side of a coil (coil -> L2): they fade from the coil's colour back to off-white
+const NEUT = GEO.groups.map(g => g.feeds.some(f => f.dev >= 0 && DEV[f.dev].kind === 'coil'));
+
+/* Current that has come through a pressed pushbutton carries that button's colour: it shades
+   from red at the button to the button's colour by the time it reaches the coil.  Work out, for
+   each pushbutton, how far along that path every wire group starts, and the length of the path. */
+const isPB = d => d >= 0 && DEV[d].kind === 'btn' && DEV[d].key !== 'STOP';
+const T0 = {}, TTOT = {};
+DEV.forEach((d, b) => {
+  if (!isPB(b)) return;
+  const m = {};
+  GEO.groups.forEach((g, i) => g.feeds.forEach(f => { if (f.dev === b) m[i] = 0; }));
+  for (let pass = 0; pass < 4; pass++) GEO.groups.forEach((g, i) => g.feeds.forEach(f => {
+    if (f.src >= 0 && f.src in m && !isPB(f.dev)) {
+      const c = m[f.src] + f.tap + passOf(f.dev);
+      if (!(i in m) || c < m[i]) m[i] = c;
+    }
+  }));
+  T0[b] = m;
+  let tot = Infinity;
+  for (const c in coilOf) if (coilOf[c].g in m) tot = Math.min(tot, m[coilOf[c].g] + coilOf[c].tap);
+  TTOT[b] = isFinite(tot) ? tot : 1;
+});
+
+
+/* ---------------- simulation ----------------
+   Every wire group and device keeps a short history of when it changed.  A change travels
+   outward: the next device sees it after the current has run along the wire to it, a coil
+   picks up / drops out when its feed changes, its contacts follow CT later, and a closing
+   contact passes current once the blade has landed. */
+let simT, gHist, tHist, dHist, coilOn, swing, queue, seq, btn, busyUntil, autoRelease;
+
+function reset() {
+  simT = 0; queue = []; seq = 0; busyUntil = 0; autoRelease = {};
+  btn = [false, false, false, false];
+  coilOn = new Array(ND).fill(false);
+  dHist = DEV.map((d, i) => [{ t: -1e9, on: initialCond(i) }]);
+  swing = DEV.map((d, i) => ({ t0: -1e9, closing: d.kind === 'con' ? d.nc : false }));
+  gHist = GEO.groups.map(() => [{ t: -1e9, lit: false }]);
+  gHist[0][0].lit = true;   // supply side is live
+  tHist = GEO.groups.map(() => [{ t: -1e9, tint: -1 }]);   // -1 = plain red; otherwise the pushbutton it came through
+}
+function initialCond(i) {
+  const d = DEV[i];
+  if (d.kind === 'btn') return d.key === 'STOP';
+  if (d.kind === 'con') return d.nc;
+  return false;
+}
+const EPS = 1e-7;
+function at(hist, t) { let v = hist[0]; for (const h of hist) { if (h.t <= t + EPS) v = h; else break; } return v; }
+function last(hist) { return hist[hist.length - 1]; }
+function push(hist, e) { hist.push(e); if (hist.length > 12) hist.splice(1, hist.length - 12); }
+
+function schedule(t, fn) { queue.push({ t, s: seq++, fn }); }
+
+function feedOn(g, f, t) {
+  let on = true;
+  if (f.dev >= 0) on = at(dHist[f.dev], t - (DEV[f.dev].kind === 'coil' ? passOf(f.dev) : 0)).on;
+  if (on && f.src >= 0) on = at(gHist[f.src], t - passOf(f.dev) - f.tap).lit;
+  return on;
+}
+function checkGroup(g, t) {
+  const now = GEO.groups[g].feeds.some(f => feedOn(g, f, t));
+  let tint = -1;
+  if (now) for (const f of GEO.groups[g].feeds) {
+    if (!feedOn(g, f, t)) continue;
+    const c = isPB(f.dev) ? f.dev : (f.src >= 0 ? at(tHist[f.src], t - passOf(f.dev) - f.tap).tint : -1);
+    if (c >= 0) tint = c;      // a pressed button wins over a plain red feed
+  }
+  const litChange = now !== last(gHist[g]).lit;
+  const tintChange = now && tint !== last(tHist[g]).tint;
+  if (!litChange && !tintChange) return;
+  if (litChange) push(gHist[g], { t, lit: now });
+  if (tintChange) push(tHist[g], { t, tint });   // the new colour travels along like the current
+  busyUntil = Math.max(busyUntil, t + groupLen[g]);
+  GEO.groups.forEach((g2, i) => g2.feeds.forEach(f => {
+    if (f.src === g) schedule(t + f.tap + passOf(f.dev), () => checkGroup(i, simTEvent));
+  }));
+  for (const c in coilOf) if (coilOf[c].g === g) schedule(t + coilOf[c].tap, () => checkCoil(+c, simTEvent));
+}
+function deviceChanged(d, t, on) {
+  if (last(dHist[d]).on === on) return;
+  push(dHist[d], { t, on });
+  const extra = DEV[d].kind === 'coil' ? passOf(d) : 0;
+  GEO.groups.forEach((g2, i) => g2.feeds.forEach(f => {
+    if (f.dev === d) schedule(t + extra, () => checkGroup(i, simTEvent));
+  }));
+}
+function checkCoil(c, t) {
+  const v = at(gHist[coilOf[c].g], t - coilOf[c].tap).lit;
+  if (v === coilOn[c]) return;
+  coilOn[c] = v;
+  deviceChanged(c, t, v);
+  busyUntil = Math.max(busyUntil, t + 0.5);
+  DEV.forEach((k, i) => { if (k.kind === 'con' && k.owner === c) schedule(t + CT, () => moveContact(i, simTEvent)); });
+}
+function moveContact(k, t) {
+  const want = coilOn[DEV[k].owner] !== DEV[k].nc;
+  if (swing[k].closing === want) return;
+  swing[k] = { t0: t, closing: want };
+  busyUntil = Math.max(busyUntil, t + SWING);
+  if (want) schedule(t + SWING, () => { if (swing[k].closing) deviceChanged(k, simTEvent, true); });
+  else deviceChanged(k, t, false);
+}
+function setButton(i, down) {
+  if (btn[i] === down) return;
+  btn[i] = down;
+  deviceChanged(i, simT, i === 0 ? !down : down);
+  busyUntil = Math.max(busyUntil, simT);
+}
+
+let simTEvent = 0;
+function runEvents(upTo) {
+  for (let guard = 0; guard < 5000; guard++) {
+    if (!queue.length) return;
+    let bi = 0;
+    for (let i = 1; i < queue.length; i++) {
+      const a = queue[i], b = queue[bi];
+      if (a.t < b.t - EPS || (Math.abs(a.t - b.t) <= EPS && a.s < b.s)) bi = i;
+    }
+    if (queue[bi].t > upTo) return;
+    const ev = queue.splice(bi, 1)[0];
+    simTEvent = ev.t;
+    ev.fn();
+  }
+}
+
+/* ---------------- drawing ---------------- */
+const NS = 'http://www.w3.org/2000/svg';
+const svg = document.getElementById('svg');
+svg.innerHTML = '';   // remove the still picture that shows when scripts are blocked
+function el(tag, attrs, parent) {
+  const e = document.createElementNS(NS, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]);
+  (parent || svg).appendChild(e);
+  return e;
+}
+const S = GEO.size;
+
+const defs = el('defs', {});
+defs.innerHTML = `
+  <linearGradient id="gWell" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#303030"/><stop offset="1" stop-color="#1f1f1f"/></linearGradient>
+  <linearGradient id="gGloss" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#fff" stop-opacity=".38"/><stop offset=".45" stop-color="#fff" stop-opacity=".06"/>
+    <stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".32"/></linearGradient>
+  <radialGradient id="gDome" cx=".38" cy=".3" r=".8"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset=".55" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".35"/></radialGradient>
+  <filter id="fShadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="2.2" stdDeviation="2.2" flood-color="#000" flood-opacity=".55"/></filter>`;
+
+const layers = { base: el('g', {}), lit: el('g', {}), dev: el('g', {}), text: el('g', {}) };
+
+// supply from L1 to STOP
+el('line', { x1: GEO.src.x1, y1: GEO.src.y, x2: GEO.src.x2, y2: GEO.src.y, stroke: '#262626', 'stroke-width': 22, 'stroke-linecap': 'round' }, layers.base);
+el('line', { x1: GEO.src.x1, y1: GEO.src.y, x2: GEO.src.x2, y2: GEO.src.y, stroke: OFF_WHITE, 'stroke-width': 8.9, 'stroke-linecap': 'round' }, layers.lit);
+
+let segIdx = 0;
+const segEls = GEO.segs.map(s => {
+  el('line', { x1: s.x1, y1: s.y1, x2: s.x2, y2: s.y2, stroke: '#262626', 'stroke-width': 22, 'stroke-linecap': 'round' }, layers.base);
+  const i = segIdx++;
+  const gr = el('linearGradient', { id: 'wg' + i, gradientUnits: 'userSpaceOnUse', x1: s.x1, y1: s.y1, x2: s.x2, y2: s.y2 }, defs);
+  const stops = [0, 1, 2, 3, 4, 5].map(() => el('stop', { offset: 0, 'stop-color': FLOW_RED }, gr));
+  return { s, g: gIndex[s.g], stops, key: '', e: el('line', { stroke: `url(#wg${i})`, 'stroke-width': 8.9, 'stroke-linecap': 'round' }, layers.lit) };
+});
+
+function octagon(cx, cy, w) {
+  const h = w / 2, c = w * 0.29289;
+  return [[-h + c, -h], [h - c, -h], [h, -h + c], [h, h - c], [h - c, h], [-h + c, h], [-h, h - c], [-h, -h + c]]
+    .map(([x, y]) => `${(cx + x).toFixed(2)},${(cy + y).toFixed(2)}`).join(' ');
+}
+function caption(txt, x, y) { const t = el('text', { x, y, 'text-anchor': 'middle', class: 'cap' }, layers.text); t.textContent = txt; }
+
+const macro = { STOP: 0, PBA: 1, PBB: 2, PBC: 3 };
+const view = DEV.map((d, i) => {
+  const v = { d };
+  const g = el('g', {}, layers.dev);
+  if (d.kind === 'btn') {
+    const B = S.box, I = S.btnIn;
+    g.setAttribute('class', 'dev'); g.setAttribute('tabindex', '0'); g.setAttribute('role', 'button');
+    g.setAttribute('aria-label', d.caption);
+    if (d.key === 'STOP') {
+      el('polygon', { points: octagon(d.x, d.y, B), fill: 'url(#gWell)', stroke: d.color, 'stroke-width': 1.8 }, g);
+      v.press = el('g', {}, g);
+      v.fill = el('polygon', { points: octagon(d.x, d.y, I), fill: d.color, stroke: '#1d2733', 'stroke-width': 1.2, filter: 'url(#fShadow)' }, v.press);
+      el('polygon', { points: octagon(d.x, d.y, I), fill: 'url(#gGloss)' }, v.press);
+    } else {
+      el('rect', { x: d.x - B / 2, y: d.y - B / 2, width: B, height: B, rx: B * .1667, fill: 'url(#gWell)', stroke: d.color, 'stroke-width': 1.8 }, g);
+      v.press = el('g', {}, g);
+      v.fill = el('rect', { x: d.x - I / 2, y: d.y - I / 2, width: I, height: I, rx: I * .1667, fill: d.color, stroke: '#1d2733', 'stroke-width': 1.2, filter: 'url(#fShadow)' }, v.press);
+      el('rect', { x: d.x - I / 2, y: d.y - I / 2, width: I, height: I, rx: I * .1667, fill: 'url(#gGloss)' }, v.press);
+    }
+    const big = d.text.length === 1;   // single-letter pushbuttons get a larger face label
+    const t = el('text', { x: d.x, y: d.y + (big ? 6.6 : 4), 'text-anchor': 'middle', class: 'devtext', 'font-size': big ? 19 : 11.5 }, v.press);
+    t.textContent = d.text; v.text = t;
+    caption(d.caption, d.x, d.y + B / 2 + 2 + 12);
+    bindButton(g, macro[d.key]);
+  } else if (d.kind === 'con') {
+    const B = S.box, H = S.conH;
+    el('rect', { x: d.x - B / 2, y: d.y - H / 2, width: B, height: H, rx: H * .1667, fill: 'url(#gWell)', stroke: d.color, 'stroke-width': 1.8 }, g);
+    v.posts = el('g', {}, g);
+    const sy = B * .045, r = B * .105, L = d.x - B / 2;
+    const inset = 4.5;   // keep the lead-in stubs clear of the coloured border
+    el('rect', { x: L + inset, y: d.y - sy, width: B * .25 - inset, height: 2 * sy }, v.posts);
+    el('rect', { x: L + B * .75, y: d.y - sy, width: B * .25 - inset, height: 2 * sy }, v.posts);
+    el('circle', { cx: L + B * .25, cy: d.y, r }, v.posts);
+    el('circle', { cx: L + B * .75, cy: d.y, r }, v.posts);
+    const gl = el('g', { fill: 'url(#gDome)' }, g);
+    el('circle', { cx: L + B * .25, cy: d.y, r }, gl);
+    el('circle', { cx: L + B * .75, cy: d.y, r }, gl);
+    // bridging bar: spans both posts and lifts straight up to open
+    const bx1 = L + B * .25 - r * 1.15, bx2 = L + B * .75 + r * 1.15, bh = 7;
+    v.blade = el('g', {}, g);
+    v.bladeShape = el('rect', { x: bx1, y: d.y - bh / 2, width: bx2 - bx1, height: bh, rx: bh / 2, stroke: 'rgba(0,0,0,.35)', 'stroke-width': .6 }, v.blade);
+    el('rect', { x: bx1, y: d.y - bh / 2, width: bx2 - bx1, height: bh, rx: bh / 2, fill: 'url(#gGloss)' }, v.blade);
+    g.insertBefore(v.blade, v.posts);   // bar sits behind the contact points
+    caption(d.caption, d.x, d.y + H / 2 + 3 + 12);
+  } else {
+    const C = S.coil, I = S.coilIn;
+    el('circle', { cx: d.x, cy: d.y, r: C / 2, fill: 'url(#gWell)', stroke: d.color, 'stroke-width': 1.8 }, g);
+    v.fill = el('circle', { cx: d.x, cy: d.y, r: I / 2, fill: GREY, stroke: '#1d2733', 'stroke-width': 1.2, filter: 'url(#fShadow)' }, g);
+    el('circle', { cx: d.x, cy: d.y, r: I / 2, fill: 'url(#gDome)' }, g);
+    const t = el('text', { x: d.x, y: d.y + 7.5, 'text-anchor': 'middle', class: 'devtext', 'font-size': 21 }, g);
+    t.textContent = d.text; v.text = t;
+    caption(d.caption, d.x, d.y + C / 2 + 2 + 12);
+  }
+  return v;
+});
+
+for (const r of GEO.rails) { const t = el('text', { x: r.x, y: r.y + 21, class: 'rail' }, layers.text); t.textContent = r.t; }
+
+// Reset sits with the other controls under the diagram
+document.getElementById('reset-btn').addEventListener('click', reset);
+
+/* ---------------- input ---------------- */
+let mode = 'click', speed = 1;
+function bindButton(g, i) {
+  const down = () => {
+    if (mode === 'click') { if (btn[i]) return; setButton(i, true); autoRelease[i] = true; }
+    else setButton(i, true);
+  };
+  const up = () => { if (mode === 'hold') setButton(i, false); };
+  g.addEventListener('pointerdown', e => { e.preventDefault(); try { g.setPointerCapture(e.pointerId); } catch (_) {} down(); });
+  g.addEventListener('pointerup', up);
+  g.addEventListener('pointercancel', up);
+  g.addEventListener('keydown', e => { if ((e.key === 'Enter' || e.key === ' ') && !e.repeat) { e.preventDefault(); down(); } });
+  g.addEventListener('keyup', e => { if (e.key === 'Enter' || e.key === ' ') up(); });
+}
+function pick(attr, val, set) {
+  document.querySelectorAll(`[data-${attr}]`).forEach(b => b.setAttribute('aria-pressed', String(b.dataset[attr] === val)));
+  set(val);
+}
+document.querySelectorAll('[data-speed]').forEach(b => b.addEventListener('click', () => pick('speed', b.dataset.speed, v => speed = +v)));
+document.querySelectorAll('[data-mode]').forEach(b => b.addEventListener('click', () => pick('mode', b.dataset.mode, v => {
+  mode = v;
+  for (let i = 0; i < 4; i++) if (btn[i]) setButton(i, false);
+  autoRelease = {};
+})));
+
+/* ---------------- frame ---------------- */
+function lerp(a, b, f) { return a + (b - a) * f; }
+function clamp01(x) { return x < 0 ? 0 : x > 1 ? 1 : x; }
+function draw() {
+  for (const v of segEls) {
+    const { s } = v, h = gHist[v.g];
+    let c = h[0];
+    for (const e of h) { if (e.t + s.off <= simT + EPS) c = e; else break; }
+    const p = c.t < -1e8 ? 1 : clamp01((simT - c.t - s.off) / s.dur);
+    const a = c.lit ? 0 : p, b = c.lit ? p : 1;
+    if (b - a < 0.002) { v.e.setAttribute('visibility', 'hidden'); continue; }
+    v.e.setAttribute('visibility', 'visible');
+    v.e.setAttribute('x1', lerp(s.x1, s.x2, a)); v.e.setAttribute('y1', lerp(s.y1, s.y2, a));
+    v.e.setAttribute('x2', lerp(s.x1, s.x2, b)); v.e.setAttribute('y2', lerp(s.y1, s.y2, b));
+    paintSegment(v);
+  }
+  view.forEach((v, i) => {
+    const d = v.d;
+    if (d.kind === 'btn') {
+      const pressed = btn[i];
+      v.fill.setAttribute('fill', pressed ? GREY : d.color);
+      v.text.style.fill = (pressed ? LIGHT_TEXT : DARK_TEXT);   // dark lettering while lit, light on grey
+      v.press.setAttribute('transform', pressed ? `translate(${d.x} ${d.y}) scale(.93) translate(${-d.x} ${-d.y})` : '');
+    } else if (d.kind === 'con') {
+      const sw = swing[i], f = clamp01((simT - sw.t0) / SWING);
+      const e = f * f * (3 - 2 * f);   // ease in and out
+      const lift = sw.closing ? lerp(OPEN_LIFT, 0, e) : lerp(0, OPEN_LIFT, e);
+      const shut = sw.closing && f >= 1;
+      v.blade.setAttribute('transform', `translate(0 ${(-lift).toFixed(2)})`);
+      v.bladeShape.setAttribute('fill', shut ? d.color : BLADE_GREY);
+      v.posts.setAttribute('fill', shut ? d.color : GREY);
+    } else {
+      const h = dHist[i], c = last(h);
+      const f = c.t < -1e8 ? 1 : clamp01((simT - c.t) / 0.5);
+      v.fill.setAttribute('fill', c.on ? mix(GREY, d.color, f) : mix(d.color, GREY, f));
+      v.text.style.fill = ((c.on ? f > .5 : f < .5) ? DARK_TEXT : LIGHT_TEXT);
+    }
+  });
+  for (const [k, c] of [['A', 10], ['B', 11], ['C', 12]]) document.getElementById('st-' + k).style.background = coilOn[c] ? DEV[c].color : '#555';
+}
+// colour of the current at fraction `fr` along segment s of group g, for a given source
+function tintColour(tint, g, s, fr) {
+  // the wire leaving STOP shades from off-white to red before it reaches the bus
+  if (s === GEO.segs[0]) return mixOk(OFF_WHITE, FLOW_RED, fr);
+  if (NEUT[g]) {
+    const into = tint < 0 ? FLOW_RED : FLOW[tint];
+    return mixOk(into, OFF_WHITE, clamp01((s.off + fr * s.dur) / groupLen[g]));
+  }
+  if (tint < 0) return FLOW_RED;
+  const base = T0[tint][g];
+  if (base === undefined) return FLOW[tint];
+  return mixOk(FLOW_RED, FLOW[tint], clamp01((base + s.off + fr * s.dur) / TTOT[tint]));
+}
+function paintSegment(v) {
+  const { s, g } = v, h = tHist[g];
+  let k = 0;
+  for (let j = 0; j < h.length; j++) { if (h[j].t + s.off <= simT + EPS) k = j; else break; }
+  const nw = h[k].tint;
+  // if the group was dark when this colour arrived, there is no older colour ahead of it
+  // (otherwise the round end of the wire would show a red tip)
+  const wasLit = k > 0 && at(gHist[g], h[k].t - 1e-4).lit;
+  const old = wasLit ? h[k - 1].tint : nw;
+  const q = h[k].t < -1e8 ? 1 : clamp01((simT - h[k].t - s.off) / s.dur);
+  let st;
+  if (q >= 1 || nw === old) st = [[0, nw], [.5, nw], [1, nw]].map(([o, c]) => [o, tintColour(c, g, s, o)]);
+  else st = [[0, tintColour(nw, g, s, 0)], [q, tintColour(nw, g, s, q)], [q, tintColour(old, g, s, q)], [1, tintColour(old, g, s, 1)]];
+  const key = st.map(x => x[0].toFixed(3) + x[1]).join('|');
+  if (key === v.key) return;
+  v.key = key;
+  v.stops.forEach((el_, j) => {
+    const x = st[Math.min(j, st.length - 1)];
+    el_.setAttribute('offset', x[0]); el_.setAttribute('stop-color', x[1]);
+  });
+}
+// blend two colours through OKLab so red-to-green does not turn muddy in the middle
+function toLin(c) { c /= 255; return c <= .04045 ? c / 12.92 : Math.pow((c + .055) / 1.055, 2.4); }
+function toSrgb(c) { c = c <= .0031308 ? 12.92 * c : 1.055 * Math.pow(c, 1 / 2.4) - .055; return Math.round(clamp01(c) * 255); }
+function oklab(h) {
+  const n = parseInt(h.slice(1), 16), r = toLin(n >> 16 & 255), g = toLin(n >> 8 & 255), b = toLin(n & 255);
+  const l = Math.cbrt(.4122214708 * r + .5363325363 * g + .0514459929 * b), m = Math.cbrt(.2119034982 * r + .6806995451 * g + .1073969566 * b), s = Math.cbrt(.0883024619 * r + .2817188376 * g + .6299787005 * b);
+  return [.2104542553 * l + .793617785 * m - .0040720468 * s, 1.9779984951 * l - 2.428592205 * m + .4505937099 * s, .0259040371 * l + .7827717662 * m - .808675766 * s];
+}
+function okHex(h1, h2, f) { const m = mixOk(h1, h2, f).match(/\d+/g).map(Number); return '#' + m.map(x => x.toString(16).padStart(2, '0')).join(''); }
+function mixOk(h1, h2, f) {
+  const A = oklab(h1), B = oklab(h2), L = lerp(A[0], B[0], f), a = lerp(A[1], B[1], f), b = lerp(A[2], B[2], f);
+  const l = (L + .3963377774 * a + .2158037573 * b) ** 3, m = (L - .1055613458 * a - .0638541728 * b) ** 3, s = (L - .0894841775 * a - 1.291485548 * b) ** 3;
+  const r = toSrgb(4.0767416621 * l - 3.3077115913 * m + .2309699292 * s), g = toSrgb(-1.2684380046 * l + 2.6097574011 * m - .3413193965 * s), bb = toSrgb(-.0041960863 * l - .7034186147 * m + 1.707614701 * s);
+  return `rgb(${r},${g},${bb})`;
+}
+// dark lettering on a lit part, light lettering on grey
+const DARK_TEXT = 'rgba(28,28,28,.85)', LIGHT_TEXT = 'rgba(242,242,242,.78)';
+function isLight(h) { return oklab(h)[0] > .8; }
+function mix(h1, h2, f) {
+  const a = parseInt(h1.slice(1), 16), b = parseInt(h2.slice(1), 16);
+  const ch = s => Math.round(lerp((a >> s) & 255, (b >> s) & 255, f));
+  return `rgb(${ch(16)},${ch(8)},${ch(0)})`;
+}
+
+let prev = performance.now();
+function tick(now) {
+  const dt = Math.min(0.1, (now - prev) / 1000); prev = now;
+  simT += dt * speed;
+  runEvents(simT);
+  if (mode === 'click') {
+    for (const i in autoRelease) {
+      if (!queue.length && simT > busyUntil + HOLD_EXTRA) { setButton(+i, false); delete autoRelease[i]; }
+    }
+  }
+  draw();
+  requestAnimationFrame(tick);
+}
+/* Fit the whole simulator in the window (or the Canvas frame) without scrolling:
+   the diagram shrinks until the title, diagram and controls all fit in the height available. */
+const stageEl = document.querySelector('.stage'), wrapEl = document.querySelector('.wrap');
+function fitToWindow() {
+  stageEl.style.maxWidth = 'none';
+  const others = wrapEl.getBoundingClientRect().height - stageEl.getBoundingClientRect().height;
+  const avail = Math.max(220, window.innerHeight - others - 2);
+  stageEl.style.maxWidth = (avail * 1219.2 / 685.8) + 'px';   // the panel shrinks with the diagram
+}
+window.addEventListener('resize', fitToWindow);
+fitToWindow();
+
+reset();
+draw();
+requestAnimationFrame(tick);
+</script>
+
+</body>
+</html>
